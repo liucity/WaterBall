@@ -1,11 +1,11 @@
 <html>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" href="data:;base64,=">
-    <!--<script src=".\mergedCanvas.js" type="text/javascript"></script>-->
-    <script src=".\tool.js" type="text/javascript"></script>
+    <script src=".\mergedCanvas.js" type="text/javascript"></script>
+    <!--<script src=".\tool.js" type="text/javascript"></script>
     <script src=".\linq.js" type="text/javascript"></script>
     <script src=".\canvas.js" type="text/javascript"></script>
-    <script src=".\simpleChart.js" type="text/javascript"></script>
+    <script src=".\simpleChart.js" type="text/javascript"></script>-->
     <style type="text/css">
         * { margin: 0;}
         #list ul { 
@@ -36,7 +36,7 @@
     <canvas id="textBall" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
     <script type="text/javascript">
         ;(function(){
-            var ball = XT.simpleChart(document.getElementById('ball'), [{
+            var ball = XT.simpleChart(document.getElementById('ball'), {
                 type: 'waterball',
                 min: 0,
                 val: 350,
@@ -44,7 +44,7 @@
                 radius: 50,
                 //color: '#FF0',
                 label: '75%'
-            }]);
+            });
             var bar = XT.simpleChart(document.getElementById('bar'), {
                 type: 'processbar',
                 min: 0,
