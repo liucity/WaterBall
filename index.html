@@ -1,0 +1,89 @@
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="data:;base64,=">
+    <script src=".\mergedCanvas.js" type="text/javascript"></script>
+    <!--<script src=".\tool.js" type="text/javascript"></script>
+    <script src=".\linq.js" type="text/javascript"></script>
+    <script src=".\canvas.js" type="text/javascript"></script>
+    <script src=".\simpleChart.js" type="text/javascript"></script>-->
+    <style type="text/css">
+        * { margin: 0;}
+        #list ul { 
+            list-style-type: none;
+            padding-left: 0;
+        }
+                
+        .transition {
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+        .transition.slow { transition-duration: 3s;}
+        
+        .hidden { display: none;}
+        
+        canvas { float: left;}
+        canvas.hover { cursor: pointer;};
+    </style>
+</head>
+
+<body style="height:100%;">
+    <canvas id="ball" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <canvas id="bar" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <canvas id="money" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <canvas id="money2" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <canvas id="circle" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <canvas id="textBall" width="200px" height="200px" class="transition slow" style="border:1px solid #FB0A1A"></canvas>
+    <script type="text/javascript">
+        ;(function(){
+            var ball = XT.simpleChart(document.getElementById('ball'), {
+                type: 'waterball',
+                min: 0,
+                val: 350,
+                max: 500,
+                radius: 50,
+                //color: '#FF0',
+                label: '75%'
+            });
+            var bar = XT.simpleChart(document.getElementById('bar'), {
+                type: 'processbar',
+                min: 0,
+                val: 50,
+                max: 100,
+                //color: '#FF0',
+                label: {
+                    text: '50%',
+                    color: '#333'
+                }
+            })
+            var money = XT.simpleChart(document.getElementById('money'), [{
+                type: 'slots',
+                //color: '#FF0',
+                font: 'bold 20px Helvetica',
+                label: '$3213123123.213'
+            }])
+            var moneyv2 = XT.simpleChart(document.getElementById('money2'), [{
+                type: 'increaseNumber',
+                //color: '#FF0',
+                font: 'bold 1.5em Helvetica',
+                label: '$321456.987'
+            }])
+            var textBall = XT.simpleChart(document.getElementById('textBall'), [{
+                type: 'mediaBall',
+                x: 100,
+                y: 100,
+                radius: 80,
+                scale: 1,
+                label: '123456789012345678901234567890123456789012345678901',
+                image: 'leavemealone.jpg'
+            }])
+            // var circle = XT.simpleChart(document.getElementById('circle'), [{
+            //     type: 'circle',
+            //     //color: '#FF0',
+            //     font: 'bold 1.5em Helvetica',
+            //     label: '$321456.987'
+            // }])
+        })();
+    </script>
+</body>
+</html>
