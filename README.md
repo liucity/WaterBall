@@ -1,5 +1,7 @@
+demo: https://liucity.github.io/WaterBall/
+
 # WaterBall
-water ball effect render by canvas
+water ball chart that be rendered by using 2D canvas
 
 # Usage
 create a canvas element
@@ -7,7 +9,7 @@ create a canvas element
 <canvas id="ball" width="200px" height="200px"></canvas>
 ```
 
-init it by follow js
+init script
 ```
 XT.simpleChart(document.getElementById('ball'), {
     type: 'waterball',
