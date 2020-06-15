@@ -1,4 +1,3 @@
-demo: https://liucity.github.io/WaterBall/
 
 # WaterBall
 water ball chart that be rendered by using 2D canvas
